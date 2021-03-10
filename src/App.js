@@ -1,7 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import React, {useState} from 'react';
+
 
 function App() {
+  
+const [equation, setEquation] = useState({});
+
+function updateEquation(e){
+  setEquation({
+    ...equation,
+    [e.target.id] : [e.target.value]
+  })
+}
   return (
     <div className="App">
       <header className="App-header">
